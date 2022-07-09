@@ -1,35 +1,28 @@
         <!-- Footer-->
-        <footer class="footer mt-auto py-3 bg-dark text-white text-center">
+        <footer class="footer mt-auto py-3 text-center">
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            2215 John Daniel Drive
-                            <br />
-                            Clark, MO 65243
-                            {{ url_for('static', filename='css/custom_styles.css') }}
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+{#                        <h4 class="text-uppercase mb-4">Location</h4>#}
+                        <p class="mb-0 text-left">
+                            <i class="fa-solid fa-map-pin"></i> {{  info.location }}<br>
+                            <i class="fa-solid fa-envelope"></i> {{ info.email }}
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!" ><i class="fab fa-fw fa-github"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <a class="btn btn-outline-light btn-social mx-1" href="{{ info.github }}" ><i class="fab fa-fw fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="{{ info.linkedin }}"><i class="fab fa-fw fa-linkedin-in"></i></a>
                     </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
-                    </div>
+
                 </div>
             </div>
+            <div class="row">
+                 <div class="container copyright pt-3"><small> &copy; {{ info.name }} {{ info.year }}</small></div>
+            </div>
         </footer>
+
 
 
          <!-- Bootstrap core JS-->

@@ -1,8 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, flash, abort
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
-from datetime import date
 from functools import wraps
+from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
@@ -16,17 +16,26 @@ ckeditor = CKEditor(app)
 Bootstrap(app)
 gravatar = Gravatar(app, size=100, rating='g', default='retro', force_default=False, force_lower=False, use_ssl=False, base_url=None)
 
-contact_info = {
+info = {
     'email': 'dev DOT paulamendez AT gmail DOT com',
     'name': 'Paula Mendez',
     'nickname': 'paulipotter',
     'github': 'https://github.com/paulipotter',
-    'linkedin': 'https://www.linkedin.com/in/paulamendez1/'
+    'linkedin': 'https://www.linkedin.com/in/paulamendez1/',
+    'year': datetime.today().year,
+    'title': 'Paula Mendez',
+    'location': 'San Diego, CA'
 }
 
+
+@app.context_processor
+def inject_contact_info():
+    return dict(info=info)
+
+
 @app.route('/')
-def get_all_posts():
-    return render_template("index.html")
+def home():
+    return render_template("index.html", info=info)
 
 
 @app.route("/about")
@@ -40,4 +49,5 @@ def contact():
 
 
 if __name__ == "__main__":
+    inject_contact_info()
     app.run(host='0.0.0.0', port=5000, debug=True)

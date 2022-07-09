@@ -1,6 +1,6 @@
 ### 🎨 Color Scheme
 | Color             | Hex                                                                |
-|-------------------| ------------------------------------------------------------------ |
+|-------------------|--------------------------------------------------------------------|
 | dark jungle       | ![#081C15](https://via.placeholder.com/10/081C15?text=+) `#081C15` |
 | regular jungle    | ![#1B4332](https://via.placeholder.com/10/1B4332?text=+) `#1B4332` |
 | light jungle      | ![#2D6A4F](https://via.placeholder.com/10/2D6A4F?text=+) `#2D6A4F` |
