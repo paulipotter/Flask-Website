@@ -264,7 +264,7 @@ header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
   padding: 200px 0 150px;
-  color: white;
+  color: A2ACC9;
 }
 
 @media only screen and (min-width: 768px) {
@@ -277,12 +277,12 @@ header.masthead .site-heading {
 
 header.masthead .page-heading,
 header.masthead .site-heading {
-  text-align: center;
+  text-align: left;
 }
 
 header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
-  font-size: 50px;
+  font-size: 45px;
   margin-top: 0;
 }
 
@@ -482,4 +482,9 @@ footer .copyright {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.site-heading p {
+  font-family: 'Inconsolata', monospace;
+  color: #1e7e34;
 }
