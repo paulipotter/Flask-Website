@@ -43,9 +43,14 @@ def about():
     return render_template("about.html", info=info) #current_user=current_user)
 
 
-@app.route("/contact")
+@app.route("/work")
 def contact():
-    return render_template("contact.html", current_user=current_user)
+    return render_template("work.html", info=info) #, current_user=current_user)
+
+
+@app.route("/code")
+def contact():
+    return render_template("code.html", info=info) #, current_user=current_user)
 
 
 if __name__ == "__main__":
