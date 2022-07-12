@@ -81,6 +81,10 @@ body{
   font-weight: 200;
 }
 
+/*About page*/
+.profile-pic {
+  border-radius: 100%;
+}
 
 
 /*footer h1, footer h2, footer h3, footer */
