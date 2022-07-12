@@ -40,7 +40,7 @@ def home():
 
 @app.route("/about")
 def about():
-    return render_template("about.html", current_user=current_user)
+    return render_template("about.html", info=info) #current_user=current_user)
 
 
 @app.route("/contact")
