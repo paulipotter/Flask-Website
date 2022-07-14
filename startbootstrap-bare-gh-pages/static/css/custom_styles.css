@@ -57,7 +57,7 @@ body{
   font-weight: 100;
 }
 
-#title h1, #title h2 {
+h1, h2 {
   font-family: "Montserrat";
   font-weight: 800;
 }
@@ -84,6 +84,15 @@ body{
 /*About page*/
 .profile-pic {
   border-radius: 100%;
+}
+
+/*Register*/
+.register-title {
+  margin-left: 16%;
+}
+
+#page-title {
+  color: var(--regular-jungle)
 }
 
 
