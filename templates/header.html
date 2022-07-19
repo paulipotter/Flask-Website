@@ -25,49 +25,44 @@
     </head>
     <body class="d-flex flex-column h-100">
         <!-- Responsive navbar-->
-
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="home" aria-selected="true">00. Home</button>
-    <button class="nav-link " id="about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab" aria-controls="about" aria-selected="false">01. About</button>
-    <button class="nav-link " id="blog-tab" data-bs-toggle="tab" data-bs-target="#nav-blog" type="button" role="tab" aria-controls="blog" aria-selected="false">02. Blog</button>
-    <button class="nav-link " id="work-tab" data-bs-toggle="tab" data-bs-target="#nav-work" type="button" role="tab" aria-controls="work" aria-selected="false">03. Work</button>
-    <button class="nav-link " id="code-tab" data-bs-toggle="tab" data-bs-target="#nav-code" type="button" role="tab" aria-controls="code" aria-selected="false">04. Code</button>
-  </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="home-tab">{{ url_for('home') }}</div>
-  <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="about-tab">{{ url_for('home') }}</div>
-  <div class="tab-pane fade" id="nav-blog" role="tabpanel" aria-labelledby="blog-tab">{{ url_for('home') }}</div>
-  <div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="work-tab">{{ url_for('home') }}</div>
-  <div class="tab-pane fade" id="nav-code" role="tabpanel" aria-labelledby="code-tab">{{ url_for('home') }}</div>
-
-</div>
-  </div>
-
-{#        <nav class="navbar navbar-expand-lg navbar-custom">#}
-{#            <div class="container">#}
-{#                <a class="navbar-brand" href="{{url_for('home')}}"><i class="fa-brands fa-pied-piper-pp fa-2xl"></i></a>#}
-{#                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>#}
-{#                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">#}
-{#                    <ul class="navbar-nav mb-2 mb-lg-0 nav-tabs" role="tablist" id="navtabs">#}
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="{{url_for('home')}}"><i class="fa-brands fa-pied-piper-pp fa-2xl"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 nav-tabs">
                         {# Home #}
-{#                        <li class="nav-item" role="presentation">#}
-{#                            <button class="nav-link active" id="home-tab" href="{{url_for('home')}}">00. Home</button></li>#}
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('home')}}">00. Home</a></li>
                         {# About #}
-{#                        <li class="nav-item" role="presentation">#}
-{#                            <button class="nav-link" id="about-tab" href="{{url_for('about')}}">01. About</button></li>#}
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('about')}}">01. About</a></li>
                         {# Work #}
-{#                        <li class="nav-item" role="presentation">#}
-{#                            <button class="nav-link" id="work-tab" href="{{url_for('work')}}">02. Work</button></li>#}
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('work')}}">02. Work</a></li>
                         {# Blog #}
-{#                        <li class="nav-item" role="presentation">#}
-{#                            <button class="nav-link" id="blog-tab" href="{{url_for('blog')}}">03. Blog</button></li>#}
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('blog')}}">03. Blog</a></li>
                         {# Code #}
-{#                        <li class="nav-item" role="presentation">#}
-{#                            <button class="nav-link" id="code-tab" href="{{url_for('code')}}">04. Code</button></li>#}
+                        <li class="nav-item"><a class="nav-link" href="{{url_for('code')}}">04. Code</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+{#    <script>#}
+{#    $(document).ready(function () {#}
 {##}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </nav>#}
+{#        $('ul.navbar-nav > li')#}
+{#                .click(function (e) {#}
+{#            $('ul.navbar-nav > li')#}
+{#                .removeClass('active');#}
+{#            $(this).addClass('active');#}
+{#        });#}
+{#    });#}
+{#    </script>#}
+
+<script>
+var menuid = "menu-dashboard";
+$(function() {
+    $('.nav li').removeClass('active');
+    $(menuid).addClass("active");
+});
+</script>
