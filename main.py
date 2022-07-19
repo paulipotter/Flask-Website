@@ -215,5 +215,9 @@ def code():
     return render_template("code.html", info=info, current_user=current_user)
 
 
+@app.route("/morse-code")
+def morse_code():
+    pass
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
