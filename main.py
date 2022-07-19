@@ -7,7 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
-from forms import LoginForm, RegisterForm, CreatePostForm, CommentForm
+from forms import LoginForm, RegisterForm, CreatePostForm
 from flask_gravatar import Gravatar
 import os
 
@@ -214,6 +214,10 @@ def delete_post(post_id):
 def code():
     return render_template("code.html", info=info, current_user=current_user)
 
+
+@app.route("/morse-code")
+def morse_code():
+    pass
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

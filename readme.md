@@ -1,4 +1,7 @@
-### 🎨 Color Scheme
+# Hi there! 👋🏻
+
+
+## 🎨 Color Scheme
 | Color             | Hex                                                                |
 |-------------------|--------------------------------------------------------------------|
 | dark jungle       | ![#081C15](https://via.placeholder.com/10/081C15?text=+) `#081C15` |
