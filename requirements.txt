@@ -1,1 +1,8 @@
 flask-moment
+Flask=2.1.3
+Flask-Bootstrap4
+Flask-CKEditor
+Werkzeug=2.1.2
+Flask-SQLAlchemy
+flask-Login
+Flask-Gravatar
