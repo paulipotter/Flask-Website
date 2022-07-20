@@ -19,22 +19,22 @@
   font-weight: 100;
   background-color: var(--dark-jungle);
   padding: 0 0 0 0;
-
 }
 
-.nav-item {
-  padding-left: 10px;
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: var(--turquoise) !important;
+  background-color: transparent;
 }
 
-#navbarSupportedContent a {
+.active{
+    background:gray; !important;
+}
+
+#nav-tabs a {
   color: var(--turquoise) !important;
 }
 
-#navbarSupportedContent a:hover {
-  color: var(--spring-green) !important;
-}
-
-#navbarSupportedContent a:active {
+#nav-tabs a:hover {
   color: var(--spring-green) !important;
 }
 
@@ -57,9 +57,10 @@ body{
   font-weight: 100;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Montserrat";
   font-weight: 800;
+  font-size: 3rem;
 }
 
 #intro-text {
@@ -95,6 +96,35 @@ h1, h2 {
   color: var(--regular-jungle)
 }
 
+/*Work page*/
+#work {
+  /* top | horizontal | bottom */
+  padding: 5% 15% 10%;
+  font-family: "Roboto Mono";
+  font-weight: 100;
+}
+#work p, #work a {
+  color: var(--dark-green);
+  font-weight: 200;
+  text-decoration: none;
+}
+
+#work-title {
+  color: var(--light-green)
+}
+
+#work-name {
+  color: var(--light-jungle);
+}
+
+#job-title {
+  color: var(--dark-green);
+  font-weight: 200;
+}
+
+#job-description {
+  color: var(--dark-honeydew)
+}
 
 /*footer h1, footer h2, footer h3, footer */
 p{

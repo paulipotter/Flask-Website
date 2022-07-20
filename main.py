@@ -8,6 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from forms import LoginForm, RegisterForm, CreatePostForm
+from xp import experience
 from flask_gravatar import Gravatar
 import os
 
@@ -140,7 +141,7 @@ def about():
 
 @app.route("/work")
 def work():
-    return render_template("work.html", info=info, current_user=current_user)
+    return render_template("work.html", info=info, current_user=current_user, experience=experience)
 
 
 @app.route("/blog")

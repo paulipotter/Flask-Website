@@ -1,17 +1,48 @@
 {% include "header.html" %}
 
-<section id="title">
+<section id="work">
     <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-3 col-sm-3">
-                <h1 id="page-title">Work</h1>
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-3 me-5">
+                <img src="{{ url_for('static', filename='img/profile-pic.png') }}" class="img-fluid profile-pic float-start mb-4" >
+                <h1 id="work-name" class="mb-3">Paula Mendez</h1>
+                <p><i class="fa-solid fa-envelope"></i> dev dot paulamendez at gmail dot com</p>
+                <p class="my-4">DevOps Engineer. Python enthusiast. Bilingual.</p>
+                <p class="mb-1"><i class="fa-solid fa-location-dot"></i> San Diego</p>
+                <p class="mb-1"><a href="https://www.linkedin.com/in/paulamendez1/"><i class="fa-brands fa-linkedin"></i> LinkedIn</p></a>
+                <p class="mb-3"><a href="https://github.com/paulipotter"><i class="fa-brands fa-github-alt"></i> Github</p></a>
+                <img src="{{ url_for('static', filename='img/skills/aws-certified-solutions-architect-associate.png') }}" class="img-fluid mt-2">
 {#                <img src="{{ url_for('static', filename='img/profile-pic.png') }}" class="img-fluid profile-pic" >#}
             </div>
-            <div class="col-lg-6 col-md-3 col-sm-3">
-                <p> to do: change padding/spacing over here. decrease top padding</p>
-{#                <h1 class="align-middle">Hi, it's me :)</h1>#}
-{#                <p>This website is a work in progress, so please be patient with me. I'm making small, regular updates every day!</p>#}
+
+            <div class="col-lg-7 col-md-3 col-sm-3 ms-4 mt-5">
+                <!-- Skills and Qualifications -->
+{#                <h3 id="work-title">Skills and Qualifications</h3>#}
+
+                <!-- Where I've worked section -->
+                <h3 id="work-title">Where I've worked</h3>
+                {% for job in experience %}
+                    <p style="text-align:left;" id="job-title" class="pt-3 pb-1">{{ job.title }} <b>@ <i>{{ job.company }}</i></b>
+                    <span style="float:right;">
+                        {{ job.dates }}
+                    </span></p>
+
+                    {% for item in job.description %}
+                    <ul style="font-size: .8rem; margin-top: -10px">
+                        <li id="job-description">
+                        {{ item }}
+                        </li>
+                    </ul>
+                    {% endfor %}
+
+                    {% for pic in job.skills %}
+                        {% set filename = 'img/skills/' ~ pic ~ '.png'  %}
+                        <img title="{{ pic }}" src="{{ url_for('static', filename=filename) }}">
+                    {% endfor %}
+                    <br><br>
+                {% endfor %}
             </div>
+
         </div>
     </div>
 </section>
