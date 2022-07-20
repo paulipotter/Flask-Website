@@ -29,18 +29,19 @@
             <div class="container">
                 <a class="navbar-brand" href="{{url_for('home')}}"><i class="fa-brands fa-pied-piper-pp fa-2xl"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0 nav-tabs">
+
+                <div class="collapse navbar-collapse justify-content-end" id="nav-tabs">
+                    <ul class="nav navbar-nav mb-2 mb-lg-0 nav-tabs">
                         {# Home #}
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('home')}}">00. Home</a></li>
+                        <li class="nav-item pl-0" ><a class="nav-link" href="{{url_for('home')}}">00. Home</a></li>
                         {# About #}
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('about')}}">01. About</a></li>
+                        <li class="nav-item px-4"><a class="nav-link" href="{{url_for('about')}}">01. About</a></li>
                         {# Work #}
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('work')}}">02. Work</a></li>
+                        <li class="nav-item px-0"><a class="nav-link" href="{{url_for('work')}}">02. Work</a></li>
                         {# Blog #}
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('blog')}}">03. Blog</a></li>
+                        <li class="nav-item px-4"><a class="nav-link" href="{{url_for('blog')}}">03. Blog</a></li>
                         {# Code #}
-                        <li class="nav-item"><a class="nav-link" href="{{url_for('code')}}">04. Code</a></li>
+                        <li class="nav-item px-0"><a class="nav-link" href="{{url_for('code')}}">04. Code</a></li>
 
                     </ul>
                 </div>
@@ -48,21 +49,10 @@
         </nav>
 
 {#    <script>#}
-{#    $(document).ready(function () {#}
-{##}
-{#        $('ul.navbar-nav > li')#}
-{#                .click(function (e) {#}
-{#            $('ul.navbar-nav > li')#}
-{#                .removeClass('active');#}
-{#            $(this).addClass('active');#}
-{#        });#}
+{#    $('#nav-tabs > ul.navbar-nav li').click(function(e) {#}
+{#        $('.nav li.active').removeClass('active');#}
+{#        var $this = $(this);#}
+{#        $this.addClass('active');#}
+{#        e.preventDefault();#}
 {#    });#}
 {#    </script>#}
-
-<script>
-var menuid = "menu-dashboard";
-$(function() {
-    $('.nav li').removeClass('active');
-    $(menuid).addClass("active");
-});
-</script>
