@@ -150,3 +150,12 @@ footer {
   align-items: center;
   color: var(--turquoise);
 }
+
+.default-section {
+  /* top | horizontal | bottom */
+  padding: 10% 12% 5%;
+}
+
+.header-footer-spacing {
+
+}
