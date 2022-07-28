@@ -123,6 +123,10 @@ def login():
     return render_template("login.html", form=form, info=info, current_user=current_user)
 
 
+@app.route('/align')
+def align():
+    return render_template("align.html", info=info)
+
 @app.route('/logout')
 def logout():
     logout_user()

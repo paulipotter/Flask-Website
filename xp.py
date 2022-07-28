@@ -8,7 +8,7 @@ experience = [
             "Participate and collaborate in the continuous improvement of CI/CD pipelines to ensure optimal site reliability."
         ],
         "dates": "Sep 2021 – Present",
-        "skills":["aws", "terraform", "docker", "mongo", "harness", "jenkins", "azure"]
+        "skills":["aws", "kubernetes", "terraform", "docker", "mongo", "harness", "jenkins", "azure"]
     },
     {
         "title": "DevOps Engineer",
@@ -19,7 +19,7 @@ experience = [
             "Participated in weekly Scrum meetings, and communicated daily with developers and other team members to ensure maximum productivity and efficiency."
         ],
         "dates": "Feb 2021 – Sep 2021",
-        "skills":["gcp", "aws", "terraform", "docker", "mongo", "jenkins"]
+        "skills":["gcp", "kubernetes", "aws", "terraform", "docker", "mongo", "jenkins"]
     },
     {
         "title": "Cloud Engineer",

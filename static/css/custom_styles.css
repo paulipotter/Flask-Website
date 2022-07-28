@@ -26,15 +26,11 @@
   background-color: transparent;
 }
 
-.active{
-    background:gray; !important;
-}
-
-#nav-tabs a {
+#nav-content a {
   color: var(--turquoise) !important;
 }
 
-#nav-tabs a:hover {
+#nav-content a:hover {
   color: var(--spring-green) !important;
 }
 
@@ -135,9 +131,12 @@ p{
 /*Footer*/
 footer {
   background-color: var(--dark-jungle);
-  color: var(--turquoise);
   font-family: "Roboto Mono";
   font-weight: 100;
+}
+
+.footer-custom {
+  color: var(--light-jungle); !important;
 }
 
 .btn-social {
@@ -148,5 +147,11 @@ footer {
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  color: var(--turquoise);
+  color: var(--light-jungle);
 }
+
+.default-section {
+  /* top | horizontal | bottom */
+  padding: 10% 12% 5%;
+}
+
