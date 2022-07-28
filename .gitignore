@@ -170,3 +170,4 @@ cython_debug/
 
 # misc
 misc/
+static/img/skills/.DS_Store
