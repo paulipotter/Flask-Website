@@ -25,3 +25,6 @@ sass/** linguist-vendored
 
 # Jupyter notebook
 *.ipynb  linguist-documentation
+
+# Heroku
+Procfile          text
