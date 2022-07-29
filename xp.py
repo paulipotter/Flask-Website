@@ -19,7 +19,7 @@ experience = [
             "Participated in weekly Scrum meetings, and communicated daily with developers and other team members to ensure maximum productivity and efficiency."
         ],
         "dates": "Feb 2021 – Sep 2021",
-        "skills":["gcp", "kubernetes", "aws", "terraform", "docker", "mongo", "jenkins"]
+        "skills":["gcp", "aws", "kubernetes", "terraform", "docker", "mongo", "jenkins"]
     },
     {
         "title": "Cloud Engineer",
