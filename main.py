@@ -147,6 +147,10 @@ def about():
 def work():
     return render_template("work.html", info=info, current_user=current_user, experience=experience)
 
+@app.route("/health")
+def health():
+    return render_template("health.html", info=info)
+
 
 @app.route("/blog")
 def blog():
