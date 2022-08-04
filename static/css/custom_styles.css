@@ -155,3 +155,9 @@ footer {
   padding: 10% 12% 5%;
 }
 
+/*Blog*/
+#blog {
+  padding: 5% 15% 10%;
+  font-family: "Roboto Mono";
+  font-weight: 100;
+}
