@@ -1,17 +1,18 @@
 {% include "header.html" %}
-<h1>Blog</h1>
+
 
 <!-- Main Content -->
   <div class="container">
     <div class="row">
+    <h1>Blog</h1>
       <div class="col-lg-8 col-md-10 mx-auto">
         {% for post in all_posts %}
         <div class="post-preview">
           <a href="{{ url_for('show_post', post_id=post.id) }}">
-            <h2 class="post-title">
+            <h5 class="post-title">
               {{post.title}}
             </h2>
-            <h3 class="post-subtitle">
+            <h6 class="post-subtitle">
               {{post.subtitle}}
             </h3>
           </a>
