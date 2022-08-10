@@ -13,6 +13,10 @@
   --light-honeydew: #D8F3DC;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*Navigation Bar*/
 .navbar-custom {
   font-family: "Roboto Mono";
@@ -88,10 +92,6 @@ h1, h2, h3 {
   margin-left: 16%;
 }
 
-#page-title {
-  color: var(--regular-jungle)
-}
-
 /*Work page*/
 #work {
   /* top | horizontal | bottom */
@@ -105,7 +105,7 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-#work-title {
+#page-title {
   color: var(--light-green)
 }
 
@@ -160,4 +160,17 @@ footer {
   padding: 5% 15% 10%;
   font-family: "Roboto Mono";
   font-weight: 100;
+}
+
+.post-title{
+  color: var(--light-jungle);
+   font-weight: 600;
+}
+
+.post-subtitle{
+  color: var(--turquoise);
+  font-weight: 100;
+}
+.post-link a:hover{
+  color: var(--turquoise);
 }
