@@ -17,6 +17,19 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+p{
+    background-color: var(--dark-jungle);
+    color: var(--light-honeydew);
+    font-weight: 100;
+    font-family: "Roboto Mono";
+}
+
 /*Navigation Bar*/
 .navbar-custom {
   font-family: "Roboto Mono";
@@ -55,12 +68,6 @@ body{
   padding: 10% 15% 15%;
   font-family: "Roboto Mono";
   font-weight: 100;
-}
-
-h1, h2, h3 {
-  font-family: "Montserrat";
-  font-weight: 800;
-  font-size: 3rem;
 }
 
 #intro-text {
@@ -105,7 +112,7 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-#page-title {
+.page-title {
   color: var(--light-green)
 }
 
@@ -123,10 +130,7 @@ h1, h2, h3 {
 }
 
 /*footer h1, footer h2, footer h3, footer */
-p{
-    background-color: var(--dark-jungle);
-    color: var(--light-honeydew)
-}
+
 
 /*Footer*/
 footer {
@@ -163,14 +167,38 @@ footer {
 }
 
 .post-title{
-  color: var(--light-jungle);
+    color: var(--light-jungle);
    font-weight: 600;
+}
+
+.post-title-2 {
+  color: var(--dark-honeydew);
+  font-weight: 600;
+  text-shadow: 0 0 5px black;
 }
 
 .post-subtitle{
   color: var(--turquoise);
-  font-weight: 100;
+  font-weight: 200;
+  text-shadow: 0 0 5px black;
+
 }
 .post-link a:hover{
   color: var(--turquoise);
+}
+
+.blog-post {
+  background-image: url('../img/blog-bg.jpg');
+  height: auto;
+  background-size: cover;
+}
+.post-title-banner{
+  backdrop-filter: blur(5px);
+}
+
+.meta {
+  text-shadow: 0 0 10px black;
+  font-family: "Roboto Mono";
+  font-weight: 100;
+  color: white;
 }
