@@ -13,6 +13,23 @@
   --light-honeydew: #D8F3DC;
 }
 
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+p{
+    background-color: var(--dark-jungle);
+    color: var(--light-honeydew);
+    font-weight: 100;
+    font-family: "Roboto Mono";
+}
+
 /*Navigation Bar*/
 .navbar-custom {
   font-family: "Roboto Mono";
@@ -53,12 +70,6 @@ body{
   font-weight: 100;
 }
 
-h1, h2, h3 {
-  font-family: "Montserrat";
-  font-weight: 800;
-  font-size: 3rem;
-}
-
 #intro-text {
   color: var(--spring-green);
 }
@@ -88,10 +99,6 @@ h1, h2, h3 {
   margin-left: 16%;
 }
 
-#page-title {
-  color: var(--regular-jungle)
-}
-
 /*Work page*/
 #work {
   /* top | horizontal | bottom */
@@ -105,7 +112,7 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-#work-title {
+.page-title {
   color: var(--light-green)
 }
 
@@ -123,10 +130,7 @@ h1, h2, h3 {
 }
 
 /*footer h1, footer h2, footer h3, footer */
-p{
-    background-color: var(--dark-jungle);
-    color: var(--light-honeydew)
-}
+
 
 /*Footer*/
 footer {
@@ -155,3 +159,46 @@ footer {
   padding: 10% 12% 5%;
 }
 
+/*Blog*/
+#blog {
+  padding: 5% 15% 10%;
+  font-family: "Roboto Mono";
+  font-weight: 100;
+}
+
+.post-title{
+    color: var(--light-jungle);
+   font-weight: 600;
+}
+
+.post-title-2 {
+  color: var(--dark-honeydew);
+  font-weight: 600;
+  text-shadow: 0 0 5px black;
+}
+
+.post-subtitle{
+  color: var(--turquoise);
+  font-weight: 200;
+  text-shadow: 0 0 5px black;
+
+}
+.post-link a:hover{
+  color: var(--turquoise);
+}
+
+.blog-post {
+  background-image: url('../img/blog-bg.jpg');
+  height: auto;
+  background-size: cover;
+}
+.post-title-banner{
+  backdrop-filter: blur(5px);
+}
+
+.meta {
+  text-shadow: 0 0 10px black;
+  font-family: "Roboto Mono";
+  font-weight: 100;
+  color: white;
+}
