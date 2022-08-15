@@ -4,25 +4,21 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 me-5">
-                <img src="{{ url_for('static', filename='img/profile-pic.png') }}" class="img-fluid profile-pic float-start mb-4 pe-3 d-none d-lg-block" >
+                <img src="{{ url_for('static', filename='img/profile-pic.png') }}" alt="Paula's memoji" class="img-fluid profile-pic float-start mb-4 pe-3 d-none d-lg-block" >
                 <h1 id="work-name" class="mb-3">Paula Mendez</h1>
                 <p><i class="fa-solid fa-envelope"></i> dev dot paulamendez at gmail dot com</p>
                 <p class="my-4">DevOps Engineer. Python enthusiast. Bilingual.</p>
                 <p class="mb-1"><i class="fa-solid fa-location-dot"></i> San Diego</p>
-                <p class="mb-1"><a href="https://www.linkedin.com/in/paulamendez1/"><i class="fa-brands fa-linkedin"></i> LinkedIn</p></a>
-                <p class="mb-3"><a href="https://github.com/paulipotter"><i class="fa-brands fa-github-alt"></i> Github</p></a>
-                <img src="{{ url_for('static', filename='img/skills/aws-certified-solutions-architect-associate.png') }}" class="img-fluid mt-2">
-{#                <img src="{{ url_for('static', filename='img/profile-pic.png') }}" class="img-fluid profile-pic" >#}
+                <p class="mb-1"><a href="https://www.linkedin.com/in/paulamendez1/"><i aria-hidden="true" class="fa-brands fa-linkedin"></i> LinkedIn</p></a>
+                <p class="mb-3"><a href="https://github.com/paulipotter"><i aria-hidden="true" class="fa-brands fa-github-alt"></i> Github</p></a>
+                <img src="{{ url_for('static', filename='img/skills/aws-certified-solutions-architect-associate.png') }}" alt="AWS Certified Solutions Architect Associate Badge" class="img-fluid mt-2">
             </div>
 
             <div class="col-lg-7 ms-4 mt-5">
-                <!-- Skills and Qualifications -->
-{#                <h3 id="work-title">Skills and Qualifications</h3>#}
-
                 <!-- Where I've worked section -->
                 <h3 class="page-title">Where I've worked</h3>
                 {% for job in experience %}
-                    <p style="text-align:left;" id="job-title" class="pt-3 pb-1">{{ job.title }} <b>@ <i>{{ job.company }}</i></b>
+                    <p style="text-align:left;" id="job-title" class="pt-3 pb-1">{{ job.title }} <b>@ <em>{{ job.company }}</em></b>
                     <span style="float:right;">
                         {{ job.dates }}
                     </span></p>
@@ -37,7 +33,7 @@
 
                     {% for pic in job.skills %}
                         {% set filename = 'img/skills/' ~ pic ~ '.png'  %}
-                        <img title="{{ pic }}" src="{{ url_for('static', filename=filename) }}">
+                        <img title="{{ pic }}" src="{{ url_for('static', filename=filename) }}" alt="{{ pic }}">
                     {% endfor %}
                     <br><br>
                 {% endfor %}
