@@ -2,16 +2,26 @@
 name: CI
 
 on:
-  pull_request:
   push:
-    branches: [main]
-  workflow_dispatch: # Allows you to run this workflow manually from UI
+    branches-ignore:
+      - '!master'   # excludes master
+  workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+#  sonarcloud:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#        with:
+#          # Disabling shallow clone is recommended for improving relevancy of reporting
+#          fetch-depth: 0
+#          args: -X
+#      - name: SonarCloud Scan
+#        uses: sonarsource/sonarcloud-github-action@master
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -53,10 +63,3 @@ jobs:
 #           path: junit/test-results-${{ matrix.python-version }}.xml
 #         # Use always() to always run this step to publish test results when there are test failures
 #         if: ${{ always() }}
-        
-      - uses: akhileshns/heroku-deploy@v3.12.12 #
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
-          healthcheck: "https://${{secrets.HEROKU_APP_NAME}}.herokuapp.com/health"

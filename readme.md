@@ -1,3 +1,5 @@
+[![CI](https://github.com/paulipotter/Flask-Website/actions/workflows/main.yml/badge.svg)](https://github.com/paulipotter/Flask-Website/actions/workflows/main.yml)
+
 # Hi there 👋🏻 Welcome!
 
 
